@@ -1,6 +1,6 @@
 package com.biology.loader;
 
-import com.biology.model.TagList;
+import com.biology.model.list.TagList;
 import com.biology.util.FileUtil;
 import org.json.JSONArray;
 import org.json.JSONObject;

@@ -1,7 +1,8 @@
 package com.biology.loader;
 
 
-import com.biology.model.CommentList;
+import com.biology.model.entity.Comment;
+import com.biology.model.list.CommentList;
 import com.biology.util.FileUtil;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -61,7 +62,7 @@ public abstract class CommentListLoader implements Loader<List>  {
     }
 
     public void report() {
-        Map<Integer, CommentList.Comment> map = commentList.getCommentMap();
+        Map<Integer, Comment> map = commentList.getCommentMap();
         if(isQuestionComment()) {
             System.out.println("Total question comment: " + map.size());
         } else {

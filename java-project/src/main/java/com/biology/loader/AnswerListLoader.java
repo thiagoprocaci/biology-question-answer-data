@@ -1,6 +1,7 @@
 package com.biology.loader;
 
-import com.biology.model.AnswerList;
+import com.biology.model.entity.Answer;
+import com.biology.model.list.AnswerList;
 import com.biology.util.FileUtil;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -64,7 +65,7 @@ public class AnswerListLoader implements Loader<List> {
     }
 
     public void report() {
-        Map<Integer, AnswerList.Answer> map = answerList.getAnswerMap();
+        Map<Integer, Answer> map = answerList.getAnswerMap();
         System.out.println("Total answer: " + map.size());
     }
 }

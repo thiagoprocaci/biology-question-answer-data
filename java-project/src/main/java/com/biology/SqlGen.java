@@ -50,17 +50,6 @@ public class SqlGen {
         answerListLoader.report();
         questionCommentLoader.report();
         answerCommentLoader.report();
-       /*
-
-
-        */
-        //AppRepository appRepository = new AppRepository();
-        //appRepository.run(tagListLoader.getSql(), "tagListLoader");
-        //appRepository.run(userListLoader.getSql(), "userListLoader");
-        //appRepository.run(questionListLoader.getSql(), "questionListLoader");
-        //appRepository.run(answerListLoader.getSql(), "answerListLoader");
-        //appRepository.run(questionCommentLoader.getSql(), "questionCommentLoader");
-        //appRepository.run(answerCommentLoader.getSql(), "answerCommentLoader");
     }
 
 

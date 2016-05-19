@@ -1,7 +1,8 @@
 package com.biology.loader;
 
 
-import com.biology.model.UserList;
+import com.biology.model.entity.User;
+import com.biology.model.list.UserList;
 import com.biology.util.FileUtil;
 
 import org.json.JSONObject;
@@ -35,7 +36,7 @@ public class UserListLoader implements Loader {
     }
 
     public void report() {
-        Map<Integer, UserList.User> map = userList.getUserMap();
+        Map<Integer, User> map = userList.getUserMap();
         System.out.println("Total user: " + map.size());
     }
 }

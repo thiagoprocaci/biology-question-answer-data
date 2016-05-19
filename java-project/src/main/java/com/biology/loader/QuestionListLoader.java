@@ -1,7 +1,8 @@
 package com.biology.loader;
 
-import com.biology.model.QuestionList;
-import com.biology.model.QuestionTag;
+import com.biology.model.entity.Question;
+import com.biology.model.list.QuestionList;
+import com.biology.model.list.QuestionTag;
 import com.biology.util.FileUtil;
 import org.json.JSONObject;
 
@@ -72,7 +73,7 @@ public class QuestionListLoader implements Loader<Integer> {
     }
 
     public void report() {
-        Map<Integer, QuestionList.Question> map = questionList.getQuestionMap();
+        Map<Integer, Question> map = questionList.getQuestionMap();
         System.out.println("Total question: " + map.size());
 
         Map<Integer, List<Integer>> map2 = questionTag.getQuestionTagMap();
