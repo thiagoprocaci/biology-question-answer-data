@@ -9,6 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.*;
+import java.net.URISyntaxException;
 import java.util.Iterator;
 import java.util.List;
 
@@ -21,9 +22,9 @@ public class SqlGen {
     private AnswerListLoader answerListLoader = new AnswerListLoader(userListLoader, answerCommentLoader);
     private QuestionListLoader questionListLoader = new QuestionListLoader(userListLoader, tagListLoader, answerListLoader, questionCommentLoader);
 
-    public SqlGen() throws IOException {
+    public SqlGen() throws IOException, URISyntaxException {
         ClassLoader classLoader = getClass().getClassLoader();
-        List<String> filePathList = FileUtil.listFilesForFolder(new File(classLoader.getResource("").getFile()));
+        List<String> filePathList = FileUtil.listFilesForFolder(new File(classLoader.getResource("").toURI().getPath()));
 
         for(String filePath: filePathList) {
             File file = new File(filePath);
@@ -54,7 +55,8 @@ public class SqlGen {
 
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, URISyntaxException {
+
         new SqlGen();
     }
 
