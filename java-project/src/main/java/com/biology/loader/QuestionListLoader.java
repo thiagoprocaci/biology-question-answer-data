@@ -6,6 +6,7 @@ import com.biology.model.list.QuestionTag;
 import com.biology.util.FileUtil;
 import org.json.JSONObject;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -84,6 +85,9 @@ public class QuestionListLoader implements Loader<Integer> {
             }
         }
         System.out.println("Total question tag: " + count);
+    }
 
+    public Collection<Question> getQuestionList() {
+        return questionList.getQuestionList();
     }
 }

@@ -23,8 +23,8 @@ public class SqlGen {
     private QuestionListLoader questionListLoader = new QuestionListLoader(userListLoader, tagListLoader, answerListLoader, questionCommentLoader);
 
     public SqlGen() throws IOException, URISyntaxException {
-        ClassLoader classLoader = getClass().getClassLoader();
-        List<String> filePathList = FileUtil.listFilesForFolder(new File(classLoader.getResource("").toURI().getPath()));
+        File f = new File("src/main/resources/");
+        List<String> filePathList = FileUtil.listFilesForFolder(f);
 
         for(String filePath: filePathList) {
             File file = new File(filePath);
@@ -54,6 +54,29 @@ public class SqlGen {
     }
 
 
+    public TagListLoader getTagListLoader() {
+        return tagListLoader;
+    }
+
+    public UserListLoader getUserListLoader() {
+        return userListLoader;
+    }
+
+    public QuestionCommentLoader getQuestionCommentLoader() {
+        return questionCommentLoader;
+    }
+
+    public AnswerCommentLoader getAnswerCommentLoader() {
+        return answerCommentLoader;
+    }
+
+    public AnswerListLoader getAnswerListLoader() {
+        return answerListLoader;
+    }
+
+    public QuestionListLoader getQuestionListLoader() {
+        return questionListLoader;
+    }
 
     public static void main(String[] args) throws IOException, URISyntaxException {
 

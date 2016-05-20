@@ -3,6 +3,7 @@ package com.biology.model.list;
 
 import com.biology.model.entity.Answer;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -49,6 +50,10 @@ public class AnswerList implements Insertable {
                 "); \n" +
                 "\n";
         return sql;
+    }
+
+    public Collection<Answer> getAnswerList() {
+        return answerMap.values();
     }
 
 }

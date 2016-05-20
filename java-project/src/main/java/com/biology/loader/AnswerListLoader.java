@@ -6,10 +6,7 @@ import com.biology.util.FileUtil;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class AnswerListLoader implements Loader<List> {
@@ -67,5 +64,9 @@ public class AnswerListLoader implements Loader<List> {
     public void report() {
         Map<Integer, Answer> map = answerList.getAnswerMap();
         System.out.println("Total answer: " + map.size());
+    }
+
+    public Collection<Answer> getAnswerList() {
+        return answerList.getAnswerList();
     }
 }

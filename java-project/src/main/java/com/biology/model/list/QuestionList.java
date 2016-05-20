@@ -3,8 +3,10 @@ package com.biology.model.list;
 
 import com.biology.model.entity.Question;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+
 
 public class QuestionList implements Insertable {
 
@@ -58,5 +60,8 @@ public class QuestionList implements Insertable {
         return sql;
     }
 
+    public Collection<Question> getQuestionList() {
+        return questionMap.values();
+    }
 
 }
